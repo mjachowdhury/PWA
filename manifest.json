@@ -1,0 +1,25 @@
+{
+    "name": "PWA Name",
+    "short_name": "PWA Name",
+    "background_color": "#fff",
+    "display": "standalone",
+    "orientation": "portrait",
+    "theme_color": "#fff",
+   
+   
+    "description": "Flickr and Script Search PWA",
+    "lang": "en-US",
+    "icons": [
+        {
+            "src": "images/flickr192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "images/flickr512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "start_url": "index.html?launcher=true"
+}

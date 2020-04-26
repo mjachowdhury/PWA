@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Appshell</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <!-- web manifest -->
+    <link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <div class="container">
+        <div id="sidebar">
+            <nav>
+                <h1>Searches</h1>
+            
+                <ul id="searches">
+            
+                    <!-- Searches terms go here -->
+            
+                </ul>
+            </nav>
+            <!-- <ul id="options">
+                <h3 id="product">Search</h3>
+                <li>Cork Institute of Technology</li>
+                <li>Sunset Beach Ireland</li>
+                <li>Lighthouse Ireland</li>
+                <li>Testfornoresult</li>
+            </ul> -->
+        </div>
+
+
+        <!--Data Part-->
+        <div id="data">
+            <h2>Find Scripts</h2>
+        </div>
+
+        <!--Search Part-->
+        <div id="search">
+            <input type="text" />
+        </div>
+
+        <!--Main Loading Part-->
+        <div id="content">
+            <img class="loading" src="PartialSizzlingChupacabra-size_restricted.gif" />
+
+            <div class="main-content">
+                <!-- <nav>
+                    <h1>Searches</h1>
+                
+                    <ul id="searches">
+                
+                        
+                
+                    </ul>
+                </nav> -->
+                
+                <main>
+                
+                    <div id=pics>
+                
+                        <!-- small images go here -->
+                
+                    </div>
+                
+                
+                </main>
+
+            </div>
+
+        </div>
+
+        <!--Footer Part-->
+        <footer>
+            <div class="footer-content">
+
+                <div class="footer-menu1">
+                    <div class="text">Flickr</div>
+                    <div class="text">Script Search</div>
+                </div>
+
+            </div>
+        </footer>
+    </div>
+   
+   <!--  <script src="https://kit.fontawesome.com/85ef9dc706.js" crossorigin="anonymous"></script> -->
+   <!--  <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker
+                .register('/serviced-worker.js')
+                .then(function () { console.log("Service Worker Registered"); });
+        }
+    </script>  -->
+    <!-- <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function () {
+                navigator.serviceWorker.register('/serviced-worker.js')
+                    .then(function () { console.log("Service Worker Registered, Cheers to PWA Fire!"); });
+            }
+            );
+        }  
+    </script> -->
+    <script src="lib/app.js" defer></script>
+    <script src="flickr-image.js" async defer></script>
+</body>
+
+</html>

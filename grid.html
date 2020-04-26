@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Appshell</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" href="stylesheet.css">
+    <!-- web manifest -->
+    <link rel="manifest" href="manifest.json">
+ 
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+
+    <di id="content">
+
+        <div class="sidebar">
+            <nav>
+                <h1>Searches</h1>
+
+                <ul id="searches">
+
+                    <!-- Searches terms go here -->
+
+                </ul>
+            </nav>
+        </div>
+        <div class="topbar">
+            <div class="nested-topbar">
+                <div class="search-flickr">
+                    <h1>Search Flickr</h1>
+                </div>
+                <div class="delete-cache>">
+                    <!-- <input type="button" value="Delete Flickr Cache" style="float: right;"> -->
+                    <button id="delete-cache-button" onclick="deleteCache()">Delete Flickr Cache</button>
+                </div>
+            </div>
+        </div>
+        <div class="middle">middle
+            <main>
+
+                <div id=pics>
+
+                    <!-- small images go here -->
+
+                </div>
+
+
+            </main>
+        </div>
+        <div class="footer">
+            <div class="nested-footer">
+                <div class="flickr-content"><a href="grid.html">
+                        <h3>Flickr Search</h3>
+                    </a> </div>
+                <div class="search-script"><a href="searchscript.html">
+                        <h3>Script Search</h3>
+                    </a> </div>
+            </div>
+
+        </div>
+        </div>
+        <script src="lib/app.js" defer></script>
+        <script src="flickr-image.js" async defer></script>
+</body>
+
+</html>
