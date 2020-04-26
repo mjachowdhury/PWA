@@ -1,7 +1,9 @@
  body {
      color: #fff;
-     font-family: 'Nunito Semibold';
+     /* font-family: 'Nunito Semibold'; */
+     font-family: "fjalla one", sans-serif;
      text-align: center;
+     background-size: cover;
  }
 
  #content {
