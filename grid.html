@@ -42,10 +42,17 @@
                 </div>
             </div>
         </div>
-        <div class="middle">middle
+        <div class="middle">
+            <div id=loading>Loading Background ...</div>
             <main>
                 <div id=pics>
                     <!-- small images go here -->
+                </div>
+                <!--this below div is for in the same page onclick pic will get bigger-->
+                <div id="bigger">               
+                    <!-- this is the large image whose src we will change 
+                		when we click on a thumbnail -->               
+                    <img id="bigimg">             
                 </div>
             </main>
         </div>
@@ -61,7 +68,7 @@
         </div>
         </div>
         <script src="lib/app.js" defer></script>
-        <script src="flickr-image.js" async defer></script>
+        <script src="flicker-image-test.js" async defer></script>
 </body>
 
 </html>

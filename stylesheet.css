@@ -94,14 +94,13 @@
      padding-top: 15px;
  }
 
-
+ /*
 
  #searches.off li {
      pointer-events: none;
      opacity: 0.8;
      color: #aaaaaa;
  }
-
 
  #searches {
      text-align: center;
@@ -110,7 +109,7 @@
 
  #searches li {
      border: 1px solid gray;
-     /*  padding: 1em; */
+     //padding: 1em; 
      display: inline-block;
      background: gray;
      margin: 1em;
@@ -119,16 +118,65 @@
      border-radius: 5px;
  }
 
-
  .imagecontainer {
      display: inline-block;
      margin: 0.5em;
  }
 
-
  #loading {
      position: absolute;
      top: 0px;
+     left: 0px;
+     padding: 0.5em;
+     background: white;
+     display: none;
+ }
+ #pics {
+     background: rgba(255, 255, 255, 0.8);
+     text-align: center;
+ }
+
+*/
+ 
+
+ #bigger {
+     text-align: center;
+ }
+
+ #pics {
+     text-align: center;
+ }
+ 
+ #searches.off li {
+     pointer-events: none;
+     opacity: 0.8;
+     color: #aaaaaa;
+ }
+
+ #searches {
+     text-align: center;
+     padding-right: 40px;
+ }
+
+ #searches li {
+     border: 1px solid gray;
+     padding: 1em; 
+     display: inline-block;
+     background: gray;
+     margin: 1em;
+     list-style: none;
+     text-align: center;
+     border-radius: 5px;
+ }
+
+ .imagecontainer {
+     display: inline-block;
+     margin: 20px;
+ }
+
+ #loading {
+     position: absolute;
+     top: 10px;
      left: 0px;
      padding: 0.5em;
      background: white;
@@ -140,10 +188,7 @@
      text-align: center;
  }
 
-
-
-
-
+ /*end flicker search */
  button {
      display: inline-block;
      border: none;

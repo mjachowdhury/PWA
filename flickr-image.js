@@ -90,6 +90,7 @@ FlickrImage.prototype.getImageObject = function () {
             // as a CSS background			
 
             imageObject.onclick = () => { showLargeImage(this.bigfilename) };
+             
 
             // Now the image has downloaded we can resolve the promise	
 
