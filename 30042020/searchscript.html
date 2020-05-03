@@ -25,42 +25,35 @@
     <di id="content">
         <div class="sidebar">
             <nav>
-                <h1>Searches</h1>
-                <ul id="searches">
-                    <!-- Searches terms go here -->
-                </ul>
+                <h2>Use the search box to find a film script</h2>
+                <!-- <ul id="searches"                   
+                </ul> -->
             </nav>
         </div>
         <div class="topbar">
             <div class="nested-topbar">
                 <div class="search-flickr">
-                    <h1>Search Flickr</h1>
+                    <h1>Find Script</h1>
                 </div>
-                <div class="delete-cache>">
-                    <!-- <input type="button" value="Delete Flickr Cache" style="float: right;"> -->
-                    <!--<button id="delete-cache-button" onclick="deleteCache()">Delete Flickr Cache</button>-->
-                    <button class="add-button">Delete Flickr Cache</button>
+                <div class="search>">
+                    <input id="searchText" type="text" />
                 </div>
             </div>
         </div>
         <div class="middle">
-            <div id=loading>Loading Background ...</div>
+            <div id="box>">
+                <input id="searchBox" type="box">
+                <hr>
+            </div>
             <main>
                 <div id=pics>
                     <!-- small images go here -->
-                </div>
-                <!--this below div is for in the same page onclick pic will get bigger-->
-                <div id="bigger">               
-                    <!-- this is the large image whose src we will change 
-                        when we click on a thumbnail -->   
-                                    
-                    <img id="bigimg">             
                 </div>
             </main>
         </div>
         <div class="footer">
             <div class="nested-footer">
-                <div class="flickr-content"><a href="grid.html">
+                <div class="flickr-content"><a href="index.html">
                         <h3>Flickr Search</h3>
                     </a> </div>
                 <div class="search-script"><a href="searchscript.html">
@@ -69,9 +62,7 @@
             </div>
         </div>
         </div>
-        <script src="lib/app.js" defer></script>
-        <script src="lib/search.js" defer></script>
-        <script src="flicker-image-test.js" async defer></script>
+        <!-- <script src="flickr-image.js" async defer></script> -->
 </body>
 
 </html>

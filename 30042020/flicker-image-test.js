@@ -208,7 +208,7 @@ function loadFromStorage() {
 
 }
 
-/* 
+
 function deleteCache() {
     self.addEventListener('activate', function (event) {
         event.waitUntil(
@@ -228,4 +228,3 @@ function deleteCache() {
     });
    // Cache.delete();
 }
- */

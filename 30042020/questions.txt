@@ -1,0 +1,3 @@
+* Slightely struggling with search script
+* trying to figure it out how to display picture title when you click the picture.
+* Also trying to implement delete cache once user press the delete button

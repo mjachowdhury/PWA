@@ -1,6 +1,6 @@
 {
-    "name": "PWA Flickr App",
-    "short_name": "PWA App",
+    "name": "PWA Name",
+    "short_name": "PWA Name",
     "background_color": "#fff",
     "display": "standalone",
     "orientation": "portrait",
