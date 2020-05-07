@@ -1,4 +1,94 @@
 const staticCacheName = 'app-shell-static-v1';
+const dynamicCacheName = 'app-shell-dynamic';
+
+const staticCacheFileNames = [
+    '/',
+    'index.html',
+    '/public/offline.html',
+    '/public/searchscript.html',
+    '/lib/app.js',
+    '/lib/search.js',
+    '/css/stylesheet.css',
+    'manifest.json'
+];
+//install service worker & caching static stuffs
+self.addEventListener('install', event => {
+    console.log('service worker has been installed');
+    event.waitUntil(
+        caches.open(staticCacheName).then(cache => {
+        console.log('cache stored');
+        cache.addAll(staticCacheFileNames);
+    
+        })
+    );
+});
+
+// activate service worker
+self.addEventListener('activate', event =>{
+    console.log('service worker has been activated');
+    event.waitUntil(
+        caches.keys().then(keys => {
+            console.log(keys);
+            return Promise.all(keys
+                .filter(key => key !== staticCacheName && key !== dynamicCacheName)
+                .map(key => caches.delete(key))
+            )
+        })    
+    );
+});
+
+
+//cache size limit function
+
+const limitCacheSize = (name , size) => {
+    caches.open(name).then(cache =>{
+        cache.keys().then(keys => {
+            if(keys.length > size){
+                cache.delete(keys[0]).then(limitCacheSize(name, size));
+            }
+        })
+    })
+};
+//fetch event 
+self.addEventListener('fetch', event => {
+    //console.log('fetch event', event);
+    event.respondWith(
+        caches.match(event.request).then(cacheRes =>{
+            return cacheRes || fetch(event.request)
+            .then(fetchRes => {
+                return caches.open(dynamicCacheName).then(cache => {
+                    cache.put(event.request.url, fetchRes.clone());
+                    limitCacheSize(dynamicCacheName, 5);
+                    return fetchRes;
+                })
+            }); 
+        }).catch(() =>{
+            if(event.request.url.indexOf('.html') > -1) {
+                return caches.match('/public/offline.html');
+            }
+        })       
+    );
+});
+
+
+
+/* self.addEventListener('fetch', event => {
+    console.log('fetch event', event);
+    event.respondWith(
+        caches.match(event.request).then(cacheRes => {
+            return cacheRes || fetch(event.request)
+            /*  .then(fetchRes => {
+                 return caches.open(dynamicCacheName).then(cache => {
+                     cache.put(event.request.url, fetchRes.clone());
+                     return fetchRes;
+                 })
+             }); */
+        /*}).catch(() => caches.match('/public/offline.html'))
+    );
+});
+ */
+
+/* const staticCacheName = 'app-shell-static-v1';
 
 const staticCacheFileNames = [
     'public/offline.html',
@@ -55,7 +145,7 @@ self.addEventListener('fetch', (event) => {
         })
     );
 });
-
+ */
 //Caching Static Resources During Install Event (Lines 8–23)
 /*The install event of the service worker is the perfect time to specify the file names to be cached. Lines 8–23 of the code help exactly in doing that. The files which get cached are index.html (Line 14’s ‘/’ caches the default HTML file directly), offline.html and app.js. Yes, offline.html does exactly what you think. It was showing the piece of offline content as soon as I switched to offline mode in the demo and that was all coming from the cache.
 

@@ -1,4 +1,4 @@
-// add this code to a js file, example search.js
+/* // add this code to a js file, example search.js
 
 onmessage = function (e) {
     searchTerms = e.data;   // this will get search term 
@@ -19,7 +19,29 @@ function processFilms(data) {
 
     }
 
+} */
+
+
+onmessage = function (e) {
+    searchWord = e.data;
+    importScripts("/lib/movieObj.js");
 }
+
+function processFilms(data) {
+    for (var key in data) {
+        if (data[key]["title"].includes(searchWord) == true) {
+            var regex = new RegExp(searchWord);
+            var text = data[key]["title"];
+            newText = text.replace(regex, '<mark>$&</mark>');
+            var dataJSON = {
+                'title': newText, 'link': data[key]["link"]
+            };
+            postMessage(JSON.stringify(dataJSON));
+            console.log(JSON.stringify(dataJSON));
+        }
+    }
+}
+
 
 
 // add this code to your search2.html file:

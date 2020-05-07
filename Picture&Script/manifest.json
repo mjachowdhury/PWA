@@ -1,6 +1,6 @@
 {
-    "name": "PWA Flickr App",
-    "short_name": "PWA App",
+    "name": "Picture & Script App",
+    "short_name": "Picture&Script",
     "background_color": "#fff",
     "display": "standalone",
     "orientation": "portrait",
@@ -10,6 +10,11 @@
     "description": "Flickr and Script Search PWA",
     "lang": "en-US",
     "icons": [
+        {
+            "src": "images/flickr96x96.png",
+            "sizes": "96x96",
+            "type": "image/png"
+        },
         {
             "src": "images/flickr192.png",
             "sizes": "192x192",

@@ -1,4 +1,11 @@
-(function () {
+if('serviceWorker' in navigator){
+    navigator.serviceWorker.register('/sw.js')
+    .then((reg) => console.log('Service worker registered', reg))
+    .catch((err)=> console.log('Servie workre not registered', err))
+}
+
+
+/* (function () {
     class App {
         constructor() {
             this.registerServiceWorker();
@@ -45,7 +52,8 @@
             this._app.textContent = 'Main Application';
         }
         /*Register service worker*/
-        registerServiceWorker() {
+
+        /* registerServiceWorker() {
             const serviceWorker = navigator.serviceWorker;
             if (!serviceWorker) {
                 return;
@@ -57,10 +65,10 @@
                 }).catch((error) => {
                     console.log('Some error occurred while registering Service Worker');
                 });
-        }
+        } */
 
         /*Install app*/
-
+/*
     }
     /*
     let deferredPrompt;
@@ -92,7 +100,7 @@
         });
     });*/
 
-    const addBtn = document.querySelector('.add-button');
+    /* const addBtn = document.querySelector('.add-button');
     //addBtn.style.display = 'none';
      function deleteCache() {
          addBtn.addEventListener('activate', function (event) {
@@ -112,8 +120,8 @@
             );
         });
     }
-   // Cache.delete();
+   // Cache.delete(); */
 
-
+/*
     new App();
-})();
+})(); */
